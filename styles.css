@@ -18,6 +18,8 @@ body{ /* body of html */
 }
 header{ /*Header section from index.html*/
     display: flex; /*sets apart containers?*/
+    /*flex-direction: column; 1:28:40*/
+
     align-items: center; /*centers sections horizontally*/
     justify-content: space-between; /*puts space between nav and section*/
 
@@ -135,6 +137,7 @@ footer > section{
 }
 footer > section:last-child{ /*selects last section of footer*/
     display: flex;/*Horizontal alignment*/
+    flex-direction: column; /*1:28:40*/
     align-items: center;
     justify-content: space-around; /*adds space between sections*/
     border-top: 1px solid darkgray; /*border around last-child of body*/
@@ -146,4 +149,13 @@ footer > section:last-child{ /*selects last section of footer*/
 }
 .footerLink a{
     cursor: pointer;
+}
+
+@media (min-width: 540px){ /*1:28:40*/
+    header{
+        flex-direction: row;
+    }
+    footer > section:last-child{
+        flex-direction: row;
+    }
 }
