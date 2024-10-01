@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0; /*do once. Removes blank margins between developments*/
+    box-sizing: 0;
+}
+
+body{ /* body of html */
+    background: #212125; /* color of background */
+    color: #ffffff; /* makes words under buttons white */
+    
+    /*padding: 23px; the margins around the page/body */
+    min-height: 100vh; /* 100% of the available view height */
+
+    display: flex; /*Horizontal alignment*/
+    flex-direction: column;
+    gap: 14px; /*Adds space between the body of sections*/
+    font-family: sans-serif, 'Times New Roman', Times, serif; /*Font changing */
+}
+header{ /*Header section from index.html*/
+    display: flex; /*sets apart containers?*/
+    align-items: center; /*centers sections horizontally*/
+    justify-content: space-between; /*puts space between nav and section*/
+
+    padding: 25px; /*gap for header sections*/
+
+    position: relative;
+    top: -13px;
+}
+nav, section{ /*within the header section from index.html*/
+    display: flex; /*sets apart nav and section at the top*/
+    align-items: center; /*formats the nav and section from the header*/
+    gap: 18px;
+}
+header section img{
+    max-width: 32px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    vertical-align: middle; /* Ensures the image is vertically centered */
+
+    position: relative; /*move pochacco in normal doc. and alignment flow*/
+    top: -1px; /* Bring pochacco to the top */
+    left: -5px; /* Bring pochacco to the left */
+}
+.whiteLink{ /*To select class whiteLink, add period to the beginning*/
+    color: white;
+}
+.greyLink{ /*To select class greyLink, add period to the beginning*/
+    color: white;
+}
+a{
+    text-decoration: unset; /*text-decoration gets rid of the lines umderneath ancors*/
+    font-size: 0.9em;
+}
+a:hover{ /*Adds lines when you hover over to the ancors*/
+    text-decoration: underline;
+}
+main{
+    flex: 1; /*Only works if the parent has a flex display but this will bridge a gap between main and footer*/
+    display: flex;
+    flex-direction: column; /*Aligns in a column*/
+    align-items: center; /*Aligns in the center*/
+    justify-content: center; /*Adds in the middle*/
+    gap: 29px; /*Gap between main attributes*/
+
+    justify-content: flex-start; /* Changed from center to flex-start */
+    margin-top: 70px; /* Adjusts this value to move content up */
+    padding: 0 14px;
+}
+
+.headerText{
+    font-size: 5.2em; /*Font size*/
+    font-family: Arial, Helvetica, sans-serif; /*Font for Google title*/
+}
+.searchBar{
+    display: flex; /*Horizontal alignment*/
+    width: 100%; /*search bar utilization*/
+    max-width: 560px;/*Search bar max length*/
+    margin: 0 auto; /*self-center margin of search bar*/
+    gap: 14px;/*gap between icon1 and input*/
+    border: 1px solid rgb(90, 90, 90);/*search bar border decoration*/
+    padding: 13px; /*search bar width*/
+    border-radius: 24px; /*search bar round edges*/
+}
+.searchBar:hover{
+    border-color: transparent;
+    background: #464444;
+}
+.IconButton{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.IconButtonContainer{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+input{/*input editing for search bar*/
+    background: transparent; /*transparent earch bar*/
+    outline: none; /*default for input ig*/
+    border: unset; /*search bar outline removed*/
+    color: white;
+    flex: 1; /*huge gap between search bar and last two icons*/
+}
+.searchButtonsContainer{
+    display: flex;
+    align-items: center; 
+    gap: 14px;
+}
+.searchButtonsContainer button{
+    padding: 8.4px 12px; /*edit for the buttons google search and im feeling lucky*/
+    border-radius: 4px;
+    background: #393b3d;
+    border: 1px solid transparent; /*gets rid of the default border AND the janky movement when using hover*/
+    color: white;/*makes words white*/
+    cursor: pointer;/*points to with little hand*/
+}
+.searchButtonsContainer button:hover{
+    border: 1px solid darkgray;
+}
+.languageSelection{
+    font-size: 0.9em; /*Font size for "Google offered in: Maori"*/
+}
+.languageSelection span{
+    color: rgb(147, 181, 192); /*Color for Maori only*/
+}
+footer{
+    display: flex;/*Horizontal alignment*/
+    flex-direction: column; /*Column alignment*/
+}
+footer > section{ 
+    padding: 14px; /*gap cushion for footer*/
+}
+footer > section:last-child{ /*selects last section of footer*/
+    display: flex;/*Horizontal alignment*/
+    align-items: center;
+    justify-content: space-around; /*adds space between sections*/
+    border-top: 1px solid darkgray; /*border around last-child of body*/
+}
+.footerLink{
+    display: flex;/*Horizontal alignment*/
+    align-items: center;
+    gap: 30px; /*Gap between footer links*/
+}
+.footerLink a{
+    cursor: pointer;
+}
